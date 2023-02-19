@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+    <title>修改查询</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--<link rel="stylesheet" type="text/css" href="css/Status_record/Status_record_query/demo.css"/>-->
+
+		<link href="public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/Status_record/status_record.css" rel="stylesheet">
+		<link href="css/Daily_items/font-awesome.css?v=4.4.0" rel="stylesheet">
+		<link href="css/Daily_items/plugins/iCheck/custom.css" rel="stylesheet">
+		<link href="css/Daily_items/animate.css" rel="stylesheet">
+		<link href="css/Daily_items/style.css?v=4.1.0" rel="stylesheet">
+
+    <script src="public/jquery/jquery-3.1.1.min.js"></script>
+    <script src="js/Status_record/Status_record_query/Status_record_query.js"></script>
+
+    <script src="js/Status_record/Status_record_query/jspdf.js"></script>
+    <script src="js/Status_record/Status_record_query/base64.js"></script>
+		<script src="public/bootstrap/js/bootstrap.min.js?v=3.3.6"></script>
+		<script type="text/javascript" src="js/my4.js"></script>
+    
+    </head>
+
+	<body class="white-bg" >
+
+	<div class="wrapper wrapper-content">
+		<div class="row">
+			<div class="bread">
+				<ol class="breadcrumb">
+					<li>突破发货</li>
+					<li class="active">修改查询</li>
+				</ol>
+			</div>
+			<div class="hr-line-dashed"></div>
+			<div style="height:180px;margin-top:50px;">
+				<div id="record_query" style="width:80%;margin:0 auto;text-align: center;font-size:14px;" >
+					<div style="height:40px;">
+						<label class="col-sm-2 control-label">突破ID</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control m-b" aria-label="请输入事件名称" name="sjId" placeholder="请输入突破ID">
+						</div>
+<!--						<label class="col-sm-2 control-label">事件类型</label>-->
+<!--						<div class="col-sm-2">-->
+<!--							<select class="form-control m-b" name="account">-->
+<!--								<option>类型 1</option>-->
+<!--								<option>类型 2</option>-->
+<!--								<option>类型 3</option>-->
+<!--								<option>类型 4</option>-->
+<!--							</select>-->
+<!--						</div>-->
+					</div>
+					<div style="height:40px;">
+<!--						<div class="form-group">-->
+<!--							<label class="col-sm-2 control-label">时间选择</label>-->
+<!--							<div class="col-sm-6 " style="text-align:left">-->
+<!--								<input class="form-control  m-b layer-date" width="100%" placeholder="开始日期" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})">-->
+<!--								<input class="form-control  m-b layer-date" width="100%" placeholder="结束日期" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})">-->
+<!--							</div>-->
+<!--						</div>-->
+						<label class="col-sm-2 control-label">SKU</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control  m-b" name="sku" placeholder="Asin1￥sku1￥发货数量,Asin2￥sku2￥发货数量(不需要则不填)">
+						</div>
+					</div>
+					<div style="height:40px;">
+<!--						<div class="form-group">-->
+<!--							<label class="col-sm-2 control-label">时间选择</label>-->
+<!--							<div class="col-sm-6 " style="text-align:left">-->
+<!--								<input class="form-control  m-b layer-date" width="100%" placeholder="开始日期" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})">-->
+<!--								<input class="form-control  m-b layer-date" width="100%" placeholder="结束日期" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})">-->
+<!--							</div>-->
+<!--						</div>-->
+						<label class="col-sm-2 control-label">发货地址</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control  m-b" name="addr" placeholder="PHX3，US，6835 W. Buckeye Rd，Phoenix，AZ，85043(不需要则不填)">
+						</div>
+					</div>
+					<div style="height:40px;">
+<!--						<div class="form-group">-->
+<!--							<label class="col-sm-2 control-label">时间选择</label>-->
+<!--							<div class="col-sm-6 " style="text-align:left">-->
+<!--								<input class="form-control  m-b layer-date" width="100%" placeholder="开始日期" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})">-->
+<!--								<input class="form-control  m-b layer-date" width="100%" placeholder="结束日期" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})">-->
+<!--							</div>-->
+<!--						</div>-->
+						<label class="col-sm-2 control-label">锁仓</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control  m-b" name="suocang" placeholder="美西（不需要则不填）">
+						</div>
+					</div>
+					<div style="height:40px;margin-bottom:20px;">
+<!--						<div class="form-group">-->
+<!--							<label class="col-sm-2 control-label">时间选择</label>-->
+<!--							<div class="col-sm-6 " style="text-align:left">-->
+<!--								<input class="form-control  m-b layer-date" width="100%" placeholder="开始日期" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})">-->
+<!--								<input class="form-control  m-b layer-date" width="100%" placeholder="结束日期" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})">-->
+<!--							</div>-->
+<!--						</div>-->
+
+						<div class="form-group col-sm-12">
+							<button class="btn btn-whit" type="button" id="btnn">提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						</div>
+					</div>
+				</div>
+				<div class="form-group col-sm-12" style="margin: 0 auto;text-align: center;">
+					<div>
+							<input type="text" class="form-control  m-b layer-date"  name="sjId1" placeholder="请输入突破ID进行查询">
+						<button class="btn btn-primary" type="button" style="margin-top : 8px" id="cx">查&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;询</button>
+					</div>
+
+				</div>
+			</div>
+			<div id="text">
+				<table class="table table-striped"  >
+					<thead>
+					<tr>
+						<th width="10%"><h4>突破ID</h4></th>
+						<th width="15%"><h4>SKU</h4></th>
+						<th width="3%"><h4>锁仓</h4></th>
+						<th width="3%"><h4>国家</h4></th>
+						<th width="10%"><h4>发货地址</h4></th>
+						<th width="20%"><h4>多渠道反馈</h4></th>
+						<th width="3%"><h4>授权</h4></th>
+						<th width="8%"><h4>反馈</h4></th>
+						<th width="5%"><h4>建仓</h4></th>
+<!--						<th width="10%"><h4>地图查看</h4></th>-->
+
+					</tr>
+					</thead>
+					<tbody id="record">
+<!--					<tr>-->
+<!--						<td class="num" style="" id="sjId">1</td>-->
+<!--						<td class="name" id="sku">2</td>-->
+<!--						<td class="startdate" id="suocang">3</td>-->
+<!--						<td class="enddate" id="guojia">4</td>-->
+<!--						<td class="company" id="addr">5</td>-->
+<!--						<td class="company" id="fk">6</td>-->
+<!--						<td width="100" class="app"><input type="button" value="建&nbsp;&nbsp;仓" onclick="caozuo()"/></td>-->
+<!--					</tr>-->
+<!--					<tr>-->
+<!--						<td class="num" style="background-color: #2f4050;color:white;">2</td>-->
+<!--						<td class="name"></td>-->
+<!--						<td class="startdate"></td>-->
+<!--						<td class="enddate"></td>-->
+<!--						<td class="company"></td>-->
+<!--						<td class="company"></td>-->
+<!--						<td width="100" class="app"><input type="button" value="查看详情" onclick="caozuo()" /></td>-->
+<!--						<td><button class="btn btn-secondary" type="button">-->
+<!--							<span class="glyphicon glyphicon-map-marker"  aria-hidden="true"></span>-->
+<!--						</button></td>-->
+<!--					</tr>-->
+<!--					<tr>-->
+<!--						<td class="num" style="background-color: #2f4050;color:white;">3</td>-->
+<!--						<td class="name"></td>-->
+<!--						<td class="startdate"></td>-->
+<!--						<td class="enddate"></td>-->
+<!--						<td class="company"></td>-->
+<!--						<td class="company"></td>-->
+<!--						<td width="100" class="app"><input type="button" value="查看详情" onclick="caozuo()"/></td>-->
+<!--						<td><button class="btn btn-secondary" type="button">-->
+<!--							<span class="glyphicon glyphicon-map-marker"  aria-hidden="true"></span>-->
+<!--						</button></td>-->
+<!--					</tr>-->
+<!--					<tr>-->
+<!--						<td class="num" style="background-color: #2f4050;color:white;">4</td>-->
+<!--						<td class="name"></td>-->
+<!--						<td class="startdate"></td>-->
+<!--						<td class="enddate"></td>-->
+<!--						<td class="company"></td>-->
+<!--						<td class="company"></td>-->
+<!--						<td width="100" class="app"><input type="button" value="查看详情" onclick="caozuo()"/></td>-->
+<!--						<td><button class="btn btn-secondary" type="button">-->
+<!--							<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>-->
+<!--						</button></td>-->
+<!--					</tr>-->
+<!--					<tr>-->
+<!--						<td class="num" style="background-color: #2f4050;color:white;">5</td>-->
+<!--						<td class="name"></td>-->
+<!--						<td class="startdate"></td>-->
+<!--						<td class="enddate"></td>-->
+<!--						<td class="company"></td>-->
+<!--						<td class="company"></td>-->
+<!--						<td width="100" class="app"><input type="button" value="查看详情" onclick="caozuo()" style="width:110px;margin:auto"/></td>-->
+<!--						<td><button class="btn btn-secondary" type="button" >-->
+<!--							<span class="glyphicon glyphicon-map-marker"  aria-hidden="true"></span>-->
+<!--						</button></td>-->
+<!--					</tr>-->
+					</tbody>
+				</table>
+<!--				<div class="row pagination-wrap" style="text-align: center">-->
+<!--					<ul class="pagination pagination-large">-->
+<!--						<li><a href="#">前一页</a></li>-->
+<!--						<li><a href="#">1</a></li>-->
+<!--						<li><a href="#">2</a></li>-->
+<!--						<li><a href="#">3</a></li>-->
+<!--						<li><a href="#">4</a></li>-->
+<!--						<li><a href="#">5</a></li>-->
+<!--						<li><a href="#">后一页</a></li>-->
+<!--					</ul>-->
+<!--				</div>-->
+			</div>
+		</div>
+
+		</div>
+	<script src="plugins/layer/laydate/laydate.js"></script>
+    </body>
+</html>
